@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "name": "text",
+  "label": "Text",
+  "category": "content",
+  "description": "Parágrafo e conteúdo textual.",
+  "icon": "align-left",
+  "variants": [
+    "default",
+    "lead",
+    "narrow"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [
+    {
+      "name": "body",
+      "type": "richtext",
+      "label": "Texto"
+    }
+  ],
+  "initialStructure": {
+    "type": "block",
+    "name": "text",
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Escreva o conteúdo da página aqui."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

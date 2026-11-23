@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "name": "carousel",
+  "label": "Carousel",
+  "category": "interactive",
+  "description": "Faixa horizontal com múltiplos itens visíveis.",
+  "icon": "gallery-thumbnails",
+  "aliases": [
+    "carrousel"
+  ],
+  "variants": [
+    "default",
+    "testimonials",
+    "logos"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [],
+  "initialStructure": {
+    "type": "block",
+    "name": "carousel",
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/400x300/png",
+                "alt": "Item 1"
+              },
+              {
+                "type": "heading",
+                "level": 4,
+                "text": "Item 1"
+              },
+              {
+                "type": "paragraph",
+                "text": "Texto do item."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/400x300/png",
+                "alt": "Item 2"
+              },
+              {
+                "type": "heading",
+                "level": 4,
+                "text": "Item 2"
+              },
+              {
+                "type": "paragraph",
+                "text": "Texto do item."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/400x300/png",
+                "alt": "Item 3"
+              },
+              {
+                "type": "heading",
+                "level": 4,
+                "text": "Item 3"
+              },
+              {
+                "type": "paragraph",
+                "text": "Texto do item."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/400x300/png",
+                "alt": "Item 4"
+              },
+              {
+                "type": "heading",
+                "level": 4,
+                "text": "Item 4"
+              },
+              {
+                "type": "paragraph",
+                "text": "Texto do item."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

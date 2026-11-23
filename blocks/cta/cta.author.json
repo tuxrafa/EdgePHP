@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "name": "cta",
+  "label": "Call to Action",
+  "category": "presentation",
+  "description": "Seção de conversão com título e botão.",
+  "icon": "megaphone",
+  "variants": [
+    "default"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [],
+  "initialStructure": {
+    "type": "block",
+    "name": "cta",
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "heading",
+                "level": 2,
+                "text": "Pronto para publicar?"
+              },
+              {
+                "type": "paragraph",
+                "text": "Monte a página no Author e publique com o mesmo renderer EDS."
+              },
+              {
+                "type": "link",
+                "text": "Criar página",
+                "href": "/author/",
+                "variant": "primary"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

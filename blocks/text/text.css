@@ -1,0 +1,15 @@
+.text {
+  margin: var(--space-4) 0;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+}
+
+.text.lead > div > div > p {
+  font-size: 1.2em;
+  color: var(--color-text-muted);
+}
+
+.text.narrow {
+  max-width: 42rem;
+}

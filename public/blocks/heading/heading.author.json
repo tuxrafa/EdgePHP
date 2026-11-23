@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "name": "heading",
+  "label": "Heading",
+  "category": "content",
+  "description": "Título semântico com alinhamento e variantes.",
+  "icon": "type",
+  "variants": [
+    "default",
+    "center",
+    "eyebrow"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [
+    {
+      "name": "text",
+      "type": "heading",
+      "label": "Título",
+      "required": true
+    },
+    {
+      "name": "level",
+      "type": "select",
+      "label": "Nível",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    }
+  ],
+  "initialStructure": {
+    "type": "block",
+    "name": "heading",
+    "classes": [],
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "heading",
+                "level": 2,
+                "text": "Título da seção"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

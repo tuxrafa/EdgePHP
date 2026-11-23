@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "name": "divider",
+  "label": "Divider",
+  "category": "content",
+  "description": "Separador horizontal.",
+  "icon": "minus",
+  "variants": [
+    "default",
+    "thick"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [],
+  "initialStructure": {
+    "type": "block",
+    "name": "divider",
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "paragraph",
+                "text": " "
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

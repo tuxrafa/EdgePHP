@@ -1,0 +1,8 @@
+{
+  "boilerplateCommit": "6b05abfbe0e47df31ea40d44b57dff45964d16b5",
+  "files": {
+    "blocks/columns/columns.js": "d4aa3133fa918126152fec139e17e39c86bb7bd7b99d5ec9d20f66498f7a60e4",
+    "blocks/columns/columns.css": "dafa4c970b3e056e7293ba15c86f6f7228c0375476faca6befee57191310098b",
+    "scripts/aem.js": "786e8019b14b4c0bee9df38a3162f129c04310d9d00e7a6dd326c7e5830c84ae"
+  }
+}

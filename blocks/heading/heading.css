@@ -1,0 +1,28 @@
+.heading {
+  margin: var(--space-6) 0;
+}
+
+.heading h1,
+.heading h2,
+.heading h3,
+.heading h4,
+.heading h5,
+.heading h6 {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  line-height: 1.2;
+}
+
+.heading.center {
+  text-align: center;
+}
+
+.heading.eyebrow > div > div > p:first-child {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}

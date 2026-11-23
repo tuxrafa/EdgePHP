@@ -1,0 +1,42 @@
+{
+  "siteId": "main",
+  "locale": "pt-BR",
+  "path": "/columns-compatibility",
+  "title": "Columns compatibility",
+  "metadata": {
+    "title": "Columns compatibility"
+  },
+  "sections": [
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "block",
+          "name": "columns",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Left"
+                    }
+                  ]
+                },
+                {
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "text": "Right"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

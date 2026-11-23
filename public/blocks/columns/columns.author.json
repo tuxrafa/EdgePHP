@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "name": "columns",
+  "label": "Columns",
+  "category": "layout",
+  "description": "Colunas EDS (vendor Adobe boilerplate).",
+  "icon": "columns-2",
+  "variants": [
+    "default",
+    "wide"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [],
+  "initialStructure": {
+    "type": "block",
+    "name": "columns",
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Left"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Right"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

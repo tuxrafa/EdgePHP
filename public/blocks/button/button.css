@@ -1,0 +1,13 @@
+.button.block {
+  margin: var(--space-4) 0;
+}
+
+.button.block.center {
+  text-align: center;
+}
+
+.button.block .button.outline {
+  background: transparent;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+}

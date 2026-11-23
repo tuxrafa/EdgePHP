@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "name": "hero",
+  "label": "Hero",
+  "category": "presentation",
+  "description": "Seção principal de destaque.",
+  "icon": "layout-template",
+  "variants": [
+    "default",
+    "centered",
+    "split",
+    "background-image"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [
+    {
+      "name": "title",
+      "type": "heading",
+      "label": "Título",
+      "required": true
+    },
+    {
+      "name": "description",
+      "type": "richtext",
+      "label": "Descrição"
+    },
+    {
+      "name": "image",
+      "type": "image",
+      "label": "Imagem"
+    },
+    {
+      "name": "primaryLink",
+      "type": "link",
+      "label": "Botão principal"
+    }
+  ],
+  "initialStructure": {
+    "type": "block",
+    "name": "hero",
+    "classes": [
+      "split"
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "NOVO"
+              },
+              {
+                "type": "heading",
+                "level": 1,
+                "text": "Construa sites com blocos EDS"
+              },
+              {
+                "type": "paragraph",
+                "text": "Author visual + runtime PHP + JavaScript original dos blocos."
+              },
+              {
+                "type": "link",
+                "text": "Começar",
+                "href": "#",
+                "variant": "primary"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/900x700/png",
+                "alt": "Hero"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

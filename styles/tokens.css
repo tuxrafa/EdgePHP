@@ -1,0 +1,41 @@
+:root {
+  --color-primary: #c45c26;
+  --color-primary-hover: #a3491c;
+  --color-text: #152029;
+  --color-text-muted: #5b6b78;
+  --color-background: #ffffff;
+  --color-surface: #f5f1ea;
+  --color-border: rgba(21, 32, 41, 0.14);
+  --color-accent: #2f6f4e;
+
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-serif: "IBM Plex Serif", Georgia, serif;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --radius-sm: 0.35rem;
+  --radius-md: 0.65rem;
+  --radius-lg: 1rem;
+
+  --shadow-sm: 0 8px 24px rgba(16, 24, 32, 0.08);
+  --shadow-md: 0 18px 40px rgba(16, 24, 32, 0.14);
+
+  --container-width: 1200px;
+  --transition-fast: 160ms ease;
+
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 900px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+  }
+}

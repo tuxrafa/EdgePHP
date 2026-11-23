@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "name": "accordion",
+  "label": "Accordion",
+  "category": "interactive",
+  "description": "Itens expansíveis (FAQ).",
+  "icon": "chevrons-down-up",
+  "variants": [
+    "default",
+    "open-first"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [],
+  "initialStructure": {
+    "type": "block",
+    "name": "accordion",
+    "classes": [
+      "open-first"
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "O que é o EdgePHP?"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Um CMS PHP com contrato de blocos inspirado no Adobe EDS."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Preciso alterar o JS do bloco?"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Não. Os blocos decoram o HTML gerado pelo PHP no navegador."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Funciona no mobile?"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "paragraph",
+                "text": "Sim. Todos os blocos da Fase 1 são responsivos."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

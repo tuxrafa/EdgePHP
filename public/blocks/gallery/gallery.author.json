@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "name": "gallery",
+  "label": "Gallery",
+  "category": "media",
+  "description": "Grade de imagens com lightbox opcional.",
+  "icon": "images",
+  "variants": [
+    "default"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [],
+  "initialStructure": {
+    "type": "block",
+    "name": "gallery",
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/600x600/png",
+                "alt": "Foto 1"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/600x600/png",
+                "alt": "Foto 2"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/600x600/png",
+                "alt": "Foto 3"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/600x600/png",
+                "alt": "Foto 4"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

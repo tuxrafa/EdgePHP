@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "name": "cards",
+  "label": "Cards",
+  "category": "collections",
+  "description": "Coleção de cartões com imagem e texto.",
+  "icon": "layout-panel-top",
+  "variants": [
+    "default",
+    "horizontal"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [],
+  "initialStructure": {
+    "type": "block",
+    "name": "cards",
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/640x400/png",
+                "alt": "Card 1"
+              },
+              {
+                "type": "heading",
+                "level": 3,
+                "text": "Card um"
+              },
+              {
+                "type": "paragraph",
+                "text": "Descrição curta do primeiro card."
+              },
+              {
+                "type": "link",
+                "text": "Detalhes",
+                "href": "#",
+                "variant": "secondary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/640x400/png",
+                "alt": "Card 2"
+              },
+              {
+                "type": "heading",
+                "level": 3,
+                "text": "Card dois"
+              },
+              {
+                "type": "paragraph",
+                "text": "Descrição curta do segundo card."
+              },
+              {
+                "type": "link",
+                "text": "Detalhes",
+                "href": "#",
+                "variant": "secondary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/640x400/png",
+                "alt": "Card 3"
+              },
+              {
+                "type": "heading",
+                "level": 3,
+                "text": "Card três"
+              },
+              {
+                "type": "paragraph",
+                "text": "Descrição curta do terceiro card."
+              },
+              {
+                "type": "link",
+                "text": "Detalhes",
+                "href": "#",
+                "variant": "secondary"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

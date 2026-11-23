@@ -1,0 +1,43 @@
+.gallery {
+  margin: var(--space-8) 0;
+}
+
+.gallery > div {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.gallery-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+.gallery-lightbox {
+  border: 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  max-width: min(900px, 92vw);
+}
+
+.gallery-lightbox img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+}
+
+.gallery-close {
+  margin-top: var(--space-3);
+}

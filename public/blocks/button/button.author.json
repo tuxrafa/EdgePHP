@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "name": "button",
+  "label": "Button",
+  "category": "content",
+  "description": "Botão / link de chamada para ação.",
+  "icon": "mouse-pointer-click",
+  "variants": [
+    "default",
+    "center"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [
+    {
+      "name": "label",
+      "type": "text",
+      "label": "Texto"
+    },
+    {
+      "name": "href",
+      "type": "link",
+      "label": "URL"
+    }
+  ],
+  "initialStructure": {
+    "type": "block",
+    "name": "button",
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "link",
+                "text": "Saiba mais",
+                "href": "#",
+                "variant": "primary"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

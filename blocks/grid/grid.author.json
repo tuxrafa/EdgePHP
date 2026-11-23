@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "name": "grid",
+  "label": "Grid",
+  "category": "layout",
+  "description": "Grade responsiva de células.",
+  "icon": "layout-grid",
+  "variants": [
+    "default"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [],
+  "initialStructure": {
+    "type": "block",
+    "name": "grid",
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "heading",
+                "level": 3,
+                "text": "Item 1"
+              },
+              {
+                "type": "paragraph",
+                "text": "Descrição"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "heading",
+                "level": 3,
+                "text": "Item 2"
+              },
+              {
+                "type": "paragraph",
+                "text": "Descrição"
+              }
+            ]
+          },
+          {
+            "content": [
+              {
+                "type": "heading",
+                "level": 3,
+                "text": "Item 3"
+              },
+              {
+                "type": "paragraph",
+                "text": "Descrição"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+.image {
+  margin: var(--space-6) 0;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.image.rounded img {
+  border-radius: 999px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  max-width: 280px;
+  margin-inline: auto;
+}
+
+.image.shadow img {
+  box-shadow: var(--shadow-md);
+}

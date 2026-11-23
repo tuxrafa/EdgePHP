@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "name": "image",
+  "label": "Image",
+  "category": "content",
+  "description": "Imagem com alt text e legenda opcional.",
+  "icon": "image",
+  "variants": [
+    "default",
+    "rounded",
+    "shadow"
+  ],
+  "compatibility": "EDS-C1",
+  "fields": [
+    {
+      "name": "src",
+      "type": "image",
+      "label": "Imagem"
+    },
+    {
+      "name": "alt",
+      "type": "text",
+      "label": "Alt text"
+    }
+  ],
+  "initialStructure": {
+    "type": "block",
+    "name": "image",
+    "rows": [
+      {
+        "cells": [
+          {
+            "content": [
+              {
+                "type": "image",
+                "src": "https://placehold.co/1200x675/png",
+                "alt": "Imagem de exemplo",
+                "caption": "Legenda"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
