@@ -2,6 +2,7 @@ import type {
   BlockDefinition,
   FragmentRecord,
   PageContent,
+  PageChildrenResponse,
   PageRecord,
   TemplateLayoutNode,
   TemplateRecord,
@@ -52,6 +53,14 @@ export const api = {
   },
   listPages() {
     return request<{ data: PageRecord[] }>('/api/v1/pages');
+  },
+  listPageChildren(parent = '', limit = 200, offset = 0) {
+    const params = new URLSearchParams({
+      parent,
+      limit: String(limit),
+      offset: String(offset),
+    });
+    return request<PageChildrenResponse>(`/api/v1/pages/children?${params}`);
   },
   getPage(id: string) {
     return request<{ data: PageRecord }>(`/api/v1/pages/${id}`);

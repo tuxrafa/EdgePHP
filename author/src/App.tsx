@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { api } from './services/api';
 import { useEditorStore } from './stores/editorStore';
 import LoginPage from './features/auth/LoginPage';
 import AuthorShell from './components/AuthorShell';
+import PagesConsole from './features/pages-console/PagesConsole';
 
 export default function App() {
   const user = useEditorStore((s) => s.user);
@@ -17,17 +19,22 @@ export default function App() {
       .finally(() => setBooting(false));
   }, [setUser]);
 
-  if (booting) {
-    return (
-      <div className="login">
-        <div className="login-card">Carregando Author…</div>
-      </div>
-    );
-  }
-
-  if (!user) {
-    return <LoginPage />;
-  }
-
-  return <AuthorShell />;
+  return (
+    <BrowserRouter basename="/author">
+      {booting ? (
+        <div className="login">
+          <div className="login-card">Carregando Author…</div>
+        </div>
+      ) : !user ? (
+        <LoginPage />
+      ) : (
+        <Routes>
+          <Route path="pages" element={<PagesConsole />} />
+          <Route path="editor/:pageId" element={<AuthorShell />} />
+          <Route path="/" element={<AuthorShell />} />
+          <Route path="*" element={<Navigate to="/pages" replace />} />
+        </Routes>
+      )}
+    </BrowserRouter>
+  );
 }

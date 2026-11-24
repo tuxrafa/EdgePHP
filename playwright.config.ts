@@ -14,10 +14,14 @@ export default defineConfig({
     headless: true,
     trace: 'retain-on-failure',
   },
-  webServer: {
-    command: `php artisan serve --host=127.0.0.1 --port=${port}`,
-    url: baseURL,
-    reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
-  },
+  ...(process.env.EDGEPHP_BASE_URL
+    ? {}
+    : {
+        webServer: {
+          command: `php artisan serve --host=127.0.0.1 --port=${port}`,
+          url: baseURL,
+          reuseExistingServer: !process.env.CI,
+          timeout: 120_000,
+        },
+      }),
 });

@@ -111,13 +111,18 @@ button {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.btn {
+.btn,
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid transparent;
   background: transparent;
   color: inherit;
   border-radius: 8px;
   padding: 8px 12px;
   transition: 0.15s ease;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -470,6 +475,220 @@ button {
   display: flex;
   gap: 8px;
   align-items: center;
+}
+
+.console {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.console-crumbs {
+  display: flex;
+  gap: 0;
+  min-width: 0;
+  overflow: hidden;
+  font-size: 12px;
+  color: rgba(247, 242, 234, 0.75);
+  white-space: nowrap;
+}
+
+.console-toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.console-toolbar .btn {
+  color: var(--ink);
+  border-color: rgba(21, 32, 41, 0.12);
+  background: white;
+}
+
+.console-toolbar .btn.primary {
+  color: #fff7ef;
+  border-color: transparent;
+}
+
+.console-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  min-height: 0;
+  height: calc(100vh - 108px);
+}
+
+.column-view {
+  overflow: auto;
+  min-width: 0;
+}
+
+.column-tree {
+  display: flex;
+  align-items: stretch;
+  min-height: 100%;
+  width: max-content;
+  min-width: 100%;
+}
+
+.column {
+  width: 280px;
+  flex: 0 0 280px;
+  border-right: 1px solid var(--line-dark);
+  background: rgba(255, 253, 248, 0.9);
+  padding: 8px;
+}
+
+.column-heading,
+.column-status {
+  margin: 0 0 8px;
+  padding: 0 6px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.console-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr) auto auto;
+  gap: 8px;
+  align-items: center;
+  text-align: left;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.console-item.is-selected {
+  background: rgba(196, 92, 38, 0.12);
+  border-color: rgba(196, 92, 38, 0.35);
+}
+
+.console-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.console-item-text {
+  min-width: 0;
+}
+
+.console-item-text strong,
+.console-item-text small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.console-item-text small {
+  color: var(--ink-soft);
+  font-size: 11px;
+}
+
+.console-icon {
+  width: 14px;
+  height: 12px;
+  border: 1.5px solid var(--ink);
+  border-radius: 2px;
+}
+
+.console-icon.folder {
+  border-top: 0;
+  background:
+    linear-gradient(var(--accent), var(--accent)) top left / 8px 3px no-repeat,
+    rgba(231, 163, 90, 0.45);
+}
+
+.console-chevron {
+  color: var(--ink-soft);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.console-status {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ok);
+}
+
+.console-status.draft {
+  color: var(--accent);
+}
+
+.console-details {
+  border-left: 1px solid var(--line-dark);
+  background: #fffdf8;
+  padding: 16px;
+  overflow: auto;
+}
+
+.console-details h2 {
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.console-details dl {
+  margin: 0 0 16px;
+}
+
+.console-details dt {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 10px;
+}
+
+.console-details dd {
+  margin: 2px 0 0;
+  word-break: break-word;
+}
+
+.column-more {
+  margin-top: 8px;
+  color: var(--ink);
+}
+
+.column-mobile-back {
+  display: none;
+  padding: 8px;
+}
+
+@media (max-width: 800px) {
+  .console-body {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .console-details {
+    border-left: 0;
+    border-top: 1px solid var(--line-dark);
+  }
+
+  .column-mobile-back {
+    display: block;
+  }
+
+  .column-tree {
+    width: 100%;
+  }
+
+  .column {
+    display: none;
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .column.is-current {
+    display: block;
+  }
 }
 
 @media (max-width: 1100px) {

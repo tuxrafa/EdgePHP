@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useEditorStore } from '../stores/editorStore';
 import PagesPanel from '../features/pages/PagesPanel';
 import BlocksPanel from '../features/blocks/BlocksPanel';
@@ -10,6 +11,8 @@ import Inspector from '../features/inspector/Inspector';
 import PreviewFrame from '../features/preview/PreviewFrame';
 
 export default function AuthorShell() {
+  const navigate = useNavigate();
+  const { pageId } = useParams();
   const workspace = useEditorStore((s) => s.workspace);
   const page = useEditorStore((s) => s.page);
   const template = useEditorStore((s) => s.template);
@@ -24,12 +27,26 @@ export default function AuthorShell() {
   const loadTemplates = useEditorStore((s) => s.loadTemplates);
   const loadFragments = useEditorStore((s) => s.loadFragments);
   const user = useEditorStore((s) => s.user);
+  const openPage = useEditorStore((s) => s.openPage);
 
   useEffect(() => {
     void loadPages();
     void loadTemplates();
     void loadFragments();
   }, [loadPages, loadTemplates, loadFragments]);
+
+  useEffect(() => {
+    if (!pageId) return;
+    if (useEditorStore.getState().page?.id === pageId) return;
+    void openPage(pageId);
+  }, [pageId, openPage]);
+
+  function backToPages() {
+    if (dirty && !window.confirm('Há alterações não salvas. Voltar ao gerenciador de páginas?')) {
+      return;
+    }
+    navigate('/pages');
+  }
 
   const title =
     workspace === 'template'
@@ -56,6 +73,14 @@ export default function AuthorShell() {
     <div className="shell">
       <header className="topbar">
         <div className="brand">EdgePHP</div>
+        <button
+          type="button"
+          className="btn"
+          data-testid="back-to-pages"
+          onClick={backToPages}
+        >
+          Back to Pages
+        </button>
         <div className="meta">
           <strong>{title}</strong>
           <span>{subtitle}</span>

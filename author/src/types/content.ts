@@ -58,6 +58,32 @@ export type PageContent = {
   orphanSlots?: Record<string, SlotPayload>;
 };
 
+export type PageNode = {
+  path: string;
+  segment: string;
+  title: string;
+  kind: 'page' | 'folder';
+  explicit: boolean;
+  pageId: string | null;
+  status: string | null;
+  templateId: string | null;
+  hasChildren: boolean;
+  updatedAt: string | null;
+};
+
+export type PageChildrenResponse = {
+  data: PageNode[];
+  meta: {
+    parent: string;
+    siteId: string;
+    locale: string | null;
+    limit: number;
+    offset: number;
+    total: number;
+    hasMore: boolean;
+  };
+};
+
 export type PageRecord = {
   id: string;
   siteId: string;

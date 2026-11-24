@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Application\Content\CreatePage;
 use App\Application\Content\GetPage;
+use App\Application\Content\ListPageChildren;
 use App\Application\Content\ListPages;
 use App\Application\Content\PublishPage;
 use App\Application\Content\UpdatePage;
@@ -32,6 +33,25 @@ class PageController extends Controller
                 'publishedRevisionId' => $page->publishedRevisionId,
             ])->values(),
         ]);
+    }
+
+    public function children(Request $request, ListPageChildren $listPageChildren): JsonResponse
+    {
+        $siteId = (string) $request->query('siteId', 'main');
+        $locale = $request->query('locale');
+        $parent = (string) $request->query('parent', '');
+        $limit = (int) $request->query('limit', 200);
+        $offset = (int) $request->query('offset', 0);
+
+        $result = $listPageChildren->handle(
+            $siteId,
+            is_string($locale) ? $locale : null,
+            $parent,
+            $limit,
+            $offset,
+        );
+
+        return response()->json($result);
     }
 
     public function store(Request $request, CreatePage $createPage): JsonResponse

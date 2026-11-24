@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useEditorStore } from '../../stores/editorStore';
 
 export default function PagesPanel() {
@@ -13,6 +14,8 @@ export default function PagesPanel() {
   const [path, setPath] = useState('/home');
   const [templateId, setTemplateId] = useState<string>('');
   const [busy, setBusy] = useState(false);
+  const navigate = useNavigate();
+  const { pageId } = useParams();
 
   useEffect(() => {
     void loadTemplates();
@@ -33,6 +36,9 @@ export default function PagesPanel() {
 
   return (
     <div className="stack">
+      <Link className="btn" to="/pages" data-testid="open-pages-console">
+        Abrir gerenciador de páginas
+      </Link>
       <div className="field">
         <label htmlFor="new-title">Nova página</label>
         <input
@@ -88,7 +94,10 @@ export default function PagesPanel() {
           key={item.id}
           type="button"
           className={`list-item ${page?.id === item.id ? 'active' : ''}`}
-          onClick={() => void openPage(item.id)}
+          onClick={() => {
+            void openPage(item.id);
+            if (pageId) navigate(`/editor/${item.id}`);
+          }}
         >
           {item.title}
           <small>

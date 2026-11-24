@@ -14,6 +14,7 @@ Route::prefix('v1')->group(function () {
 
     Route::get('/pages', [PageController::class, 'index']);
     Route::post('/pages', [PageController::class, 'store']);
+    Route::get('/pages/children', [PageController::class, 'children']);
     Route::get('/pages/{id}', [PageController::class, 'show']);
     Route::patch('/pages/{id}', [PageController::class, 'update']);
     Route::post('/pages/{id}/publish', [PageController::class, 'publish']);
